@@ -1,0 +1,11 @@
+BudgetTrack — phone-only GitHub upload
+
+1. Extract BudgetTrack-GitHub-Upload.zip using Samsung My Files.
+2. Open https://github.com/Stnky-Pnky/BudgetTrack in Chrome.
+3. The project files must appear at repository ROOT, not in an extra folder.
+4. GitHub's ordinary mobile upload may not preserve folder paths. A practical approach is to open https://github.dev/Stnky-Pnky/BudgetTrack in Chrome with Desktop site enabled, then use Explorer's upload functionality to import the extracted files/folders and commit changes. If your browser does not allow folder uploads, use a desktop-mode browser or a mobile Git client that supports committing folders.
+5. Check that the repository contains app/build.gradle.kts, build.gradle.kts, settings.gradle.kts, app/src/main/AndroidManifest.xml, and .github/workflows/android.yml.
+6. On GitHub open Actions > Build BudgetTrack APK > Run workflow (or inspect the push-triggered run).
+7. After success, open the run's Artifacts section and download BudgetTrack-debug-apk. Extract the downloaded artifact ZIP, then install app-debug.apk.
+
+IMPORTANT: Uploading the project ZIP as a single GitHub file does NOT build the app. GitHub Actions needs the extracted files in the correct paths. This source has not yet been compiled or device-tested. Do not enter real financial information until it has been tested and backup/export is implemented.
